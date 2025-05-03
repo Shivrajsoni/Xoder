@@ -10,6 +10,6 @@ export async function POST(req: NextRequest) {
     console.log("Support request received:", { email, message });
     return NextResponse.json({ success: true });
   } catch (error) {
-    return NextResponse.json({ success: false, error: "Invalid request." }, { status: 400 });
+    return NextResponse.json({ success: false, error: error }, { status: 400 });
   }
 }

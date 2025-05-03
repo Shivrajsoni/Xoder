@@ -25,7 +25,7 @@ export default function SupportPage() {
       } else {
         setError("There was an error submitting your complaint. Please try again.");
       }
-    } catch (err) {
+    } catch {
       setError("There was an error submitting your complaint. Please try again.");
     } finally {
       setLoading(false);
@@ -52,11 +52,11 @@ export default function SupportPage() {
         <ul className="space-y-4">
           <li>
             <strong>How do I save my code?</strong>
-            <p>Click the "Save" button in the editor toolbar or press <kbd>Ctrl+S</kbd>.</p>
+            <p>Click the &quot;Save&quot; button in the editor toolbar or press <kbd>Ctrl+S</kbd>.</p>
           </li>
           <li>
             <strong>Can I collaborate with others?</strong>
-            <p>Yes! Use the "Share" button to invite collaborators in real-time.</p>
+            <p>Yes! Use the &quot;Share&quot; button to invite collaborators in real-time.</p>
           </li>
           <li>
             <strong>What languages are supported?</strong>

@@ -21,8 +21,14 @@ async function Header() {
     <div className="relative z-10">
       <div
         className="flex items-center lg:justify-between justify-center 
-        bg-[#0a0a0f]/80 backdrop-blur-xl p-6 mb-4 rounded-lg"
+        bg-gradient-to-br from-[#0a0a0f]/90 via-[#0a0a0f]/80 to-[#0a0a0f]/90 backdrop-blur-xl p-6 mb-4 rounded-lg
+        border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.3)] relative overflow-hidden"
       >
+        {/* Premium background effect */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] opacity-50" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(124,58,237,0.1),transparent_50%)] opacity-50" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_100%,rgba(236,72,153,0.1),transparent_50%)] opacity-50" />
+        
         <div className="hidden lg:flex items-center gap-8">
           <Link href="/profile" className="flex items-center gap-3 group relative">
             {/* Logo hover effect */}

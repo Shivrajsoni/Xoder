@@ -31,13 +31,27 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-gradient-to-b from-gray-900 to-gray-950 text-gray-100 flex flex-col`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen text-gray-100 flex flex-col relative overflow-x-hidden`}
       >
-        <ConvexClientProvider>
-        {children}
-        </ConvexClientProvider>
-      <Footer/>
-      <Toaster/>
+        {/* Premium background effects */}
+        <div className="fixed inset-0 bg-gradient-to-br from-[#0a0a0f] via-[#0a0a0f] to-[#0a0a0f] z-0" />
+        <div className="fixed inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] opacity-50 z-0" />
+        <div className="fixed inset-0 bg-[radial-gradient(circle_at_0%_0%,rgba(124,58,237,0.1),transparent_50%)] opacity-50 z-0" />
+        <div className="fixed inset-0 bg-[radial-gradient(circle_at_100%_100%,rgba(236,72,153,0.1),transparent_50%)] opacity-50 z-0" />
+        <div className="fixed inset-0 bg-[radial-gradient(circle_at_100%_0%,rgba(16,185,129,0.1),transparent_50%)] opacity-50 z-0" />
+        <div className="fixed inset-0 bg-[radial-gradient(circle_at_0%_100%,rgba(245,158,11,0.1),transparent_50%)] opacity-50 z-0" />
+        
+        {/* Ambient grid pattern */}
+        <div className="fixed inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:32px_32px] opacity-20 z-0" />
+        
+        {/* Content wrapper */}
+        <div className="relative z-10">
+          <ConvexClientProvider>
+            {children}
+          </ConvexClientProvider>
+          <Footer/>
+          <Toaster/>
+        </div>
       </body>
     </html>
     </ClerkProvider>

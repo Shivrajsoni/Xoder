@@ -1,9 +1,11 @@
+
 import { currentUser } from "@clerk/nextjs/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../convex/_generated/api";
 import Link from "next/link";
 import { Blocks, Code2, Sparkles } from "lucide-react";
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
+
 import ThemeSelector from "./ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
 import RunButton from "./RunButton";
@@ -22,7 +24,7 @@ async function Header() {
       <div
         className="flex items-center lg:justify-between justify-center 
         bg-gradient-to-br from-[#0a0a0f]/90 via-[#0a0a0f]/80 to-[#0a0a0f]/90 backdrop-blur-xl p-6 mb-4 rounded-lg
-        border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.3)] relative overflow-hidden"
+        border border-white/5 shadow-[0_0_30px_rgba(0,0,0,0.3)] relative overflow-visible"
       >
         {/* Premium background effect */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)] opacity-50" />
@@ -103,15 +105,7 @@ async function Header() {
           </SignedIn>
 
           <SignedOut>
-            <SignInButton mode="modal">
-              <button className="flex items-center gap-2 px-4 py-1.5 rounded-lg border border-blue-500/20 hover:border-blue-500/40 bg-gradient-to-r from-blue-500/10 
-                to-purple-500/10 hover:from-blue-500/20 hover:to-purple-500/20 
-                transition-all duration-300">
-                <span className="text-sm font-medium text-blue-400/90 hover:text-blue-300">
-                  Sign In
-                </span>
-              </button>
-            </SignInButton>
+            <SignInButton/>
           </SignedOut>
 
           <SignedIn>

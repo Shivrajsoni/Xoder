@@ -45,6 +45,8 @@ function SnippetDetailPage() {
                     src={`/${snippet.language}.png`}
                     alt={`${snippet.language} logo`}
                     className="w-full h-full object-contain"
+                    width={40}
+                    height={40}
                   />
                 </div>
                 <div>

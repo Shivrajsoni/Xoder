@@ -89,6 +89,7 @@ async function Header() {
           {!convexUser?.isPro && (
             <Link
               href="/pricing"
+ 
               className="flex items-center gap-2 px-4 py-1.5 rounded-lg border border-amber-500/20 hover:border-amber-500/40 bg-gradient-to-r from-amber-500/10 
                 to-orange-500/10 hover:from-amber-500/20 hover:to-orange-500/20 
                 transition-all duration-300"
@@ -105,7 +106,8 @@ async function Header() {
           </SignedIn>
 
           <SignedOut>
-            <SignInButton/>
+            <SignInButton>
+            </SignInButton>
           </SignedOut>
 
           <SignedIn>
